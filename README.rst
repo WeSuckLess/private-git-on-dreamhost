@@ -176,7 +176,7 @@ Say we decided to store them in ``~/private_repos/``. We will refer to
 this directly by ``GIT_REPOS_ROOT`` in the rest of this guide. Create
 this directory and protect it against file system access from others::
 
-    export GIT_REPOS_ROOT="~/private_repos/"
+    export GIT_REPOS_ROOT=~/private_repos/
     mkdir ${GIT_REPOS_ROOT}
     chmod 711 ${GIT_REPOS_ROOT}
 
