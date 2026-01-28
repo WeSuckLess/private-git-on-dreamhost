@@ -310,7 +310,7 @@ a ``.htaccess`` file in it::
     cd ~/www.example.tld
     mkdir corporate-git
     cd corporate-git
-    export GIT_WEB_DIR=pwd # we will use it in later steps
+    export GIT_WEB_DIR=pwd <- needs to be set explicitly instead # we will use it in later steps
     touch .htaccess
     chmod 644 .htaccess
 
@@ -501,7 +501,7 @@ Setting up GitWeb
 Now, copy all the GitWeb's media files into the directory
 where your ``.htaccess`` is::
 
-    cp ${GITWEB_INSTALL_DIR}/*.{css,png,js} ${GIT_WEB_DIR}
+    cp ${GITWEB_INSTALL_DIR}/static/*.{css,png,js} ${GIT_WEB_DIR}
     # in this example, GIT_WEB_DIR points
     # to ~/www.example.tld/corporate-git
 
