@@ -310,7 +310,7 @@ a ``.htaccess`` file in it::
     cd ~/www.example.tld
     mkdir corporate-git
     cd corporate-git
-    export GIT_WEB_DIR=`pwd` # we will use it in later steps
+    export GIT_WEB_DIR=pwd # we will use it in later steps
     touch .htaccess
     chmod 644 .htaccess
 
