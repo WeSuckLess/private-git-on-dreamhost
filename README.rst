@@ -474,22 +474,22 @@ Find it all::
     git --version
 
 Go to `git homepage`_ and download the corresponding source
-package. In my example, in which my git version is 1.7.1.1, I would
-need to grab the ``git-1.7.1.1.tar.gz`` source package::
+package. In my example, in which my git version is 1.34.1, I would
+need to grab the ``git-1.34.1.tar.gz`` source package::
 
     cd ~ # Yep, we will download it in our home directory
-    wget http://www.kernel.org/pub/software/scm/git/git-1.7.1.1.tar.gz
+    wget http://www.kernel.org/pub/software/scm/git/git-1.34.1.tar.gz
 
 Unpack it, build GitWeb::
 
-    tar zxvf git-1.7.1.1.tar.gz
-    cd git-1.7.1.1
-    make prefix=/usr/bin gitweb/gitweb.cgi
+    tar zxvf git-1.34.1.tar.gz
+    cd git-1.34.1
+    make GIT_REPOS_ROOT="/srv/git" prefix=/usr/bin gitweb
     rm gitweb/gitweb.perl # we won't need it
 
 We will install it into ``~/gitweb/``::
 
-   export GITWEB_INSTALL_DIR="~/gitweb"
+   export GITWEB_INSTALL_DIR=~/gitweb
    cp -r gitweb ${GITWEB_INSTALL_DIR}
 
 We are almost there.
